@@ -1,0 +1,8 @@
+---
+- name: installing apache
+  hosts: apache
+  user: ubuntu 
+  become: yes
+
+  roles:
+  - apache
