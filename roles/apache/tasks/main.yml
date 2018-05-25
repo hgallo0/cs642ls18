@@ -1,7 +1,18 @@
 ---
 # tasks file for apache
-- name: i just want to install apache 
+- name: i just want to install apache
   apt: name=apache2 state=present
 
-- name: start apache service 
-  service: name=apache2 state=started 
+- name: load index page
+  template: src=index.html.js2 dest=/var/www/html/index.html
+
+#- name: load background image
+#  copy: src=baddog.jpg dest=/var/www/html/baddog.jpg
+
+- name: load config file
+  template: src=apache2.conf.js2 dest=/etc/apache2/apache2.conf
+  notify:
+    - restart apache
+
+- name: start apache service
+  service: name=apache2 state=started

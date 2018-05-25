@@ -1,2 +1,3 @@
 ---
-# vars file for apache
+mygiphy: "https://giphy.com/gifs/robot-monster-laser-11e5gZ6NJ8AB1K"
+bg_color: gray
