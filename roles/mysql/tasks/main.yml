@@ -1,0 +1,33 @@
+---
+- name: i just want to install mysql
+  apt: name=mariadb-server state=present
+
+- name: start apache service
+  service: name=mysql state=started
+
+- name: need this python module to be able to use mysql ansible module
+  apt: name=python-mysqldb state=present
+
+- name: Create a new database with name 'cs642'
+  mysql_db:
+    name: cs642
+    state: present
+
+# Removes anonymous user account for localhost
+- mysql_user:
+    name: ''
+    host: localhost
+    state: absent
+
+# Create database user with name 'hgallo' and password '12345' with all database privileges
+- mysql_user:
+    name: hgallo
+    password: "{{ mysqpassword }}"
+    priv: '*.*:ALL'
+    state: present
+
+#- name: Import file.sql similar to mysql -u <username> -p <password> < hostname.sql
+#  mysql_db:
+#    state: import
+#    name: all
+#    target: /tmp/{{ inventory_hostname }}.sql
