@@ -1,0 +1,8 @@
+---
+- name: installing apache
+  hosts: mysql
+  user: ubuntu 
+  become: yes
+
+  roles:
+  - mysql

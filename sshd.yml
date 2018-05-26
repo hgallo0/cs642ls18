@@ -1,0 +1,8 @@
+- name: ssh config
+  hosts: vagrant
+
+  user: hgallo
+  become: yes
+
+  roles:
+  - sshd

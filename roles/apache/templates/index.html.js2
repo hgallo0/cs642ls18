@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Sample "Sample Page" Application</title>
+  </head>
+  <body bgcolor={{ bg_color }}>
+
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>
+        <iframe src="https://giphy.com/embed/11e5gZ6NJ8AB1K" width="480" height="326" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="{{ mygiphy }}">via GIPHY</a></p>
+        </td>
+        <td>
+          <h1>Sample "Page" Application</h1>
+        </td>
+      </tr>
+    </table>
+
+    <p>This is the home page Web application. </p>
+
+  </body>
+</html>
