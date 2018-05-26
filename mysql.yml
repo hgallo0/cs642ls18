@@ -1,8 +1,11 @@
 ---
 - name: installing apache
   hosts: mysql
-  user: ubuntu 
+  user: ubuntu
   become: yes
+
+  vars_files:
+    - password.yml
 
   roles:
   - mysql
