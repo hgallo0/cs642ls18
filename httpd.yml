@@ -6,3 +6,5 @@
 
   roles:
   - apache
+
+#ansible-playbook httpd.yml -i hosts --private-key=~/Downloads/april20.pem 

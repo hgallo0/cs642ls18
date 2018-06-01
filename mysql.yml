@@ -1,5 +1,5 @@
 ---
-- name: installing apache
+- name: installing mysql
   hosts: mysql
   user: ubuntu
   become: yes
@@ -9,3 +9,5 @@
 
   roles:
   - mysql
+
+#ansible-playbook mysql.yml -i hosts --private-key=~/Downloads/april20.pem --ask-vault-pass
