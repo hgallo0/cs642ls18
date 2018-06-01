@@ -1,0 +1,11 @@
+---
+- name: iptables
+  hosts: all
+  user: ubuntu
+  become: yes
+
+
+  roles:
+  - iptables
+
+#ansible-playbook iptables.yml -i hosts --private-key=~/Downloads/april20.pem 
