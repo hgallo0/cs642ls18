@@ -26,6 +26,16 @@
     priv: '*.*:ALL'
     state: present
 
+- name: Copy database dump file
+  copy:
+    src: mysqldump.sql
+    dest: /tmp
+
+- name: load dump to database
+  mysql_db:
+    name: cs642
+    state: import
+    target: /tmp/mysqldump.sql
 #- name: Import file.sql similar to mysql -u <username> -p <password> < hostname.sql
 #  mysql_db:
 #    state: import
