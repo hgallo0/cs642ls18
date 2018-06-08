@@ -36,3 +36,14 @@ Author Information
 ------------------
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+
+| tasks | CREATE TABLE `tasks` (
+  `task_id` int(11) NOT NULL AUTO_INCREMENT,
+  `subject` varchar(45) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`task_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 |
+
+INSERT INTO tasks (subject, start_date, description,end_date) VALUES ('task_1', '06/01/18', 'first value entered','06/02/18');
