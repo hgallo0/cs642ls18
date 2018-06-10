@@ -1,0 +1,3 @@
+---
+- name: load index page
+  template: src=index.html.js2 dest=/var/www/html/index.html

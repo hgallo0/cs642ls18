@@ -1,0 +1,40 @@
+---
+- name: load php code
+  copy:
+    src: paper_rock_scissors.php
+    dest: /var/www/html/
+
+- name: load python code
+  copy:
+    src: paper_rock_scissors.py
+    dest: /var/www/html/
+
+- name: load python code
+  copy:
+    src: paper.php
+    dest: /var/www/html/
+
+- name: load python code
+  copy:
+    src: rock.php
+    dest: /var/www/html/
+
+- name: load python code
+  copy:
+    src: scissors.php
+    dest: /var/www/html/
+
+- name: install php
+  apt:
+    name: php7.0
+    state: present
+
+- name: install lib
+  apt:
+    name: libapache2-mod-php7.0
+    state: present
+
+- name: install php test
+  copy:
+    src: info.php
+    dest: /var/www/html/

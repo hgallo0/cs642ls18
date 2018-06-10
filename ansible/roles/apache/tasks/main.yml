@@ -3,8 +3,8 @@
 - name: i just want to install apache
   apt: name=apache2 state=present
 
-- name: load index page
-  template: src=index.html.js2 dest=/var/www/html/index.html
+# - name: load index page
+#   template: src=index.html.js2 dest=/var/www/html/index.html
 
 #- name: load background image
 #  copy: src=baddog.jpg dest=/var/www/html/baddog.jpg

@@ -1,10 +1,26 @@
 ---
 - name: installing apache
   hosts: apache
-  user: ubuntu 
+  user: ubuntu
   become: yes
 
   roles:
   - apache
 
-#ansible-playbook httpd.yml -i hosts --private-key=~/Downloads/april20.pem 
+- name: configure front end
+  hosts: front-end
+  user: ubuntu
+  become: yes
+
+  roles:
+  - front-end
+
+- name: configure back end
+  hosts: back-end
+  user: ubuntu
+  become: yes
+
+  roles:
+  - back-end
+
+#ansible-playbook httpd.yml -i hosts --private-key=~/Downloads/april20.pem

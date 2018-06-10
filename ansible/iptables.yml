@@ -1,6 +1,6 @@
 ---
 - name: iptables
-  hosts: all
+  hosts: all 
   user: ubuntu
   become: yes
 

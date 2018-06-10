@@ -1,3 +1,3 @@
 variable "user_data" {
-  default = "YXB0LWdldCB1cGRhdGUKYXB0LWdldCBpbnN0YWxsIHB5dGhvbiAteQo="
+  default = "IyEvYmluL2Jhc2gKCmFwdC1nZXQgdXBkYXRlIAphcHQtZ2V0IGluc3RhbGwgcHl0aG9uIC15IAo="
 }

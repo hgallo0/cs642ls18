@@ -9,6 +9,16 @@
     jump: ACCEPT
     comment: Accept new SSH connections.
 
+- name: allow port 3306
+  iptables:
+    chain: INPUT
+    protocol: tcp
+    destination_port: 3306
+    ctstate: NEW
+    syn: match
+    jump: ACCEPT
+    comment: Accept new SSH connections.
+
 - name: allow related and established connections
   iptables:
     chain: INPUT
